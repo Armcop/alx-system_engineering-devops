@@ -1,0 +1,2 @@
+#!/bin/bash
+:r!ls -ap1 | awk '{if ($0 == "./" || $0 == "../") printf "%s, ", $0; else if ($0 ~ /^[A-Za-z0-9]/) printf "%s, ", $0} END {print ""}'
